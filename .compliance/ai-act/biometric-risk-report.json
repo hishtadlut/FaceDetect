@@ -1,0 +1,209 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-04-30T00:50:37+00:00",
+  "target": "FaceDetect",
+  "risk_domain": "eu_ai_act_biometric",
+  "status": "possible_trigger_found",
+  "manual_review_required": true,
+  "summary": {
+    "files_with_biometric_signals": 3,
+    "total_signal_lines": 24
+  },
+  "suspected_ai_act_triggers": [
+    "biometric identification or categorisation review"
+  ],
+  "required_documents": [
+    "AI system inventory entry",
+    "EU AI Act biometric-risk classification assessment",
+    "Fundamental rights impact assessment or documented rationale for why one is not required",
+    "Technical documentation for model purpose, inputs, outputs, and risk controls",
+    "Human oversight, logging, monitoring, and incident-response notes"
+  ],
+  "signals": [
+    {
+      "file": "face_detect.py",
+      "matches": [
+        {
+          "line": 1,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "import cv2"
+        },
+        {
+          "line": 9,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faceCascade = cv2.CascadeClassifier(cascPath)"
+        },
+        {
+          "line": 12,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "image = cv2.imread(imagePath)"
+        },
+        {
+          "line": 13,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)"
+        },
+        {
+          "line": 16,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faces = faceCascade.detectMultiScale("
+        },
+        {
+          "line": 21,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "flags = cv2.cv.CV_HAAR_SCALE_IMAGE"
+        },
+        {
+          "line": 28,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)"
+        },
+        {
+          "line": 30,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.imshow(\"Faces found\", image)"
+        }
+      ]
+    },
+    {
+      "file": "face_detect_cv3.py",
+      "matches": [
+        {
+          "line": 1,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "import cv2"
+        },
+        {
+          "line": 9,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faceCascade = cv2.CascadeClassifier(cascPath)"
+        },
+        {
+          "line": 12,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "image = cv2.imread(imagePath)"
+        },
+        {
+          "line": 13,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)"
+        },
+        {
+          "line": 16,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faces = faceCascade.detectMultiScale("
+        },
+        {
+          "line": 21,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "#flags = cv2.CV_HAAR_SCALE_IMAGE"
+        },
+        {
+          "line": 28,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)"
+        },
+        {
+          "line": 30,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.imshow(\"Faces found\", image)"
+        }
+      ]
+    },
+    {
+      "file": "live.py",
+      "matches": [
+        {
+          "line": 4,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "import cv2"
+        },
+        {
+          "line": 6,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cap = cv2.VideoCapture(0)"
+        },
+        {
+          "line": 9,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faceCascade = cv2.CascadeClassifier(\"haarcascade_frontalface_default.xml\")"
+        },
+        {
+          "line": 16,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)"
+        },
+        {
+          "line": 19,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "faces = faceCascade.detectMultiScale("
+        },
+        {
+          "line": 24,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "#flags = cv2.CV_HAAR_SCALE_IMAGE"
+        },
+        {
+          "line": 31,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)"
+        },
+        {
+          "line": 35,
+          "term": "OpenCV",
+          "ai_act_concept": "possible biometric image processing",
+          "basis": "direct biometric-data processing signal",
+          "snippet": "cv2.imshow('frame', frame)"
+        }
+      ]
+    }
+  ],
+  "ai_act_context": "EU AI Act context for this POC:\n- Article 3 defines biometric identification as automated recognition of human features to establish identity by comparing biometric data to stored biometric data.\n- Article 3 defines biometric verification as one-to-one identity confirmation against previously provided biometric data.\n- Article 3 defines emotion recognition as identifying or inferring emotions or intentions on the basis of biometric data.\n- Article 3 defines biometric categorisation as assigning natural persons to categories on the basis of biometric data.\n- Annex III lists remote biometric identification, sensitive/protected biometric categorisation, and emotion recognition as high-risk biometric AI areas where permitted by law.\n- Article 5 prohibits some biometric uses, including untargeted scraping to build facial recognition databases, workplace/education emotion inference except medical or safety uses, and biometric categorisation to infer listed sensitive traits.\n- Article 50 requires deployers of emotion recognition or biometric categorisation systems to inform exposed persons.\n\nSource references:\n- Article 3 definitions: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-3\n- Annex III high-risk biometric areas: https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3\n- Article 5 prohibited AI practices: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5\n- Article 50 transparency obligations: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50\n\nPositive examples for this POC:\n- webcam/video/image/audio/voice input used to infer emotion, stress, mood, intent, or affect;\n- face embeddings, face_recognition, face-api, Rekognition, Azure Face, DeepFace, dlib, OpenCV face detection, or facial landmark code used for matching or identification;\n- fingerprint, iris, retina, voiceprint, gait, liveness, or other biometric-template matching;\n- age, sex, ethnicity, race, disability, health, political, religious, sexual orientation, or similar categories inferred from face, voice, gait, or other biometric data.\n\nNegative examples that should not trigger biometric AI Act remediation by themselves:\n- text-only sentiment analysis of chats, emails, support tickets, or relationship messages;\n- product copy that says emotional, emotion, face a consequence, interface, or user-facing;\n- one-to-one biometric login verification where the sole purpose is confirming the claimed user identity, unless other biometric categorisation or identification signals appear.\n",
+  "disclaimer": "This POC reports possible compliance triggers from source-code signals. It is not a legal conclusion and requires review by qualified counsel or a DPO."
+}
