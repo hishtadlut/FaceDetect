@@ -1,3 +1,9 @@
+# COMPLIANCE NOTE: This script performs face detection only (Haar Cascade bounding-box
+# detection). It does not perform face recognition, biometric identification, emotion
+# recognition, or biometric categorisation. No biometric data is stored or transmitted.
+# Under the EU AI Act, mere detection without identity/category/emotion inference is
+# not classified as high-risk biometric AI.
+
 # This script will detect faces via your webcam.
 # Tested with OpenCV3
 
